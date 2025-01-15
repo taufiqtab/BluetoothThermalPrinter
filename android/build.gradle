@@ -25,13 +25,15 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 29
-
+    compileSdkVersion 34
+    ndkVersion "25.1.8937393"
+    
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
+        targetSdkVersion 34
     }
     lintOptions {
         disable 'InvalidPackage'
